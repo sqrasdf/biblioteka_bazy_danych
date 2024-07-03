@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Members</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            {% for key in members[0].keys() %}
+            <th>{{ key }}</th>
+            {% endfor %}
+            <th> History </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for member in members %}
+        <tr>
+            {% for value in member.values() %}
+            <td>{{ value }}</td>
+            {% endfor %}
+            <td><a href="{{ url_for('loans_by_member', member_id=member.MemberID) }}">View History</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

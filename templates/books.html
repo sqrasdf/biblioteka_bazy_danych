@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Books</h2>
+<table class="table table-striped">
+    <thead>
+        
+        <tr>
+            {% for value in books[0].keys()%}
+            <th>{{value}}</th>
+            {% endfor %}
+        </tr>
+
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            {% for value in book.values() %}
+            <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Authors</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            {% for key in authors[0].keys() %}
+            <th>{{ key }}</th>
+            {% endfor %}
+            <th> Books </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for author in authors %}
+        <tr>
+            {% for value in author.values() %}
+            <td>{{ value }}</td>
+            {% endfor %}
+            <td><a href="{{ url_for('books_by_author', author_id=author.AuthorID) }}">View Books</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

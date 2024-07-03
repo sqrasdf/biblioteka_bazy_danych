@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron text-center bg-primary text-white">
+    <h1 class="display-4">Welcome to the Library</h1>
+    <p class="lead">Explore a world of books, authors, genres, members, and loans.</p>
+    <hr class="my-4 bg-light">
+    <p>Use the navigation bar to explore different sections.</p>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Books</h5>
+                    <p class="card-text">Browse our collection of books across various genres and authors.</p>
+                    <a href="/books" class="btn btn-primary">View Books</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Authors</h5>
+                    <p class="card-text">Learn more about the authors behind your favorite books.</p>
+                    <a href="/authors" class="btn btn-primary">View Authors</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Genres</h5>
+                    <p class="card-text">Explore books by different genres to find your next read.</p>
+                    <a href="/genres" class="btn btn-primary">View Genres</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Members</h5>
+                    <p class="card-text">See the list of members in our library community.</p>
+                    <a href="/members" class="btn btn-primary">View Members</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Loans</h5>
+                    <p class="card-text">Check the status of your book loans and due dates.</p>
+                    <a href="/loans" class="btn btn-primary">View Loans</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Loans Ranking</h5>
+                    <p class="card-text">See the most popular books and members with the highest loans.</p>
+                    <a href="/loans_ranking" class="btn btn-primary">View Loans Ranking</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
